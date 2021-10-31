@@ -39,7 +39,7 @@ nav ul ul {
 	display: none;
 }
 
-nav li:hover > ul {
+nav li:focus-within > ul, nav li:hover > ul {
 	display: block;
 	font-size: .9em;
 }
@@ -89,7 +89,7 @@ aside {
 		justify-content: space-between;
 	}
 
-		nav li:focus > ul, nav li:hover > ul {
+		nav li:focus-within > ul, nav li:hover > ul {
 		position: absolute;
 		background-color: rgba(0,0,0,.7);
 		margin-top: 5px;
