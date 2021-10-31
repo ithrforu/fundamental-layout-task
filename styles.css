@@ -39,7 +39,7 @@ nav ul ul {
 	display: none;
 }
 
-nav li:focus-within > ul, nav li:hover > ul {
+nav li:visited > ul, nav li:focus-within > ul, nav li:hover > ul {
 	display: block;
 	font-size: .9em;
 }
@@ -74,7 +74,7 @@ nav a:hover {
 }
 
 aside {
-	/*clear: left;*/
+	clear: left;
 }
 
 @media screen and (min-width: 40em) {
@@ -89,14 +89,18 @@ aside {
 		justify-content: space-between;
 	}
 
-		nav li:focus-within > ul, nav li:hover > ul {
+	nav li:visited > ul {
+		display: none;
+	}
+
+	nav li:focus-within > ul, nav li:hover > ul {
 		position: absolute;
 		background-color: rgba(0,0,0,.7);
 		margin-top: 5px;
 		border-radius: 5px;
 	}
 
-	nav li:hover li:not(:first-child) {
+	nav li:focus-within > ul, nav li:hover li:not(:first-child) {
 		margin-top: 5px;
 	}
 }
