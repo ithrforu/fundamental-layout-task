@@ -89,11 +89,15 @@ aside {
 		justify-content: space-between;
 	}
 
-		nav li:hover > ul {
+		nav li:focus > ul, nav li:hover > ul {
 		position: absolute;
 		background-color: rgba(0,0,0,.7);
 		margin-top: 5px;
 		border-radius: 5px;
+	}
+
+	nav li:hover li:not(:first-child) {
+		margin-top: 5px;
 	}
 }
 
