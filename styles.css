@@ -115,6 +115,12 @@ aside {
 		clear: none;
 	}
 
+	.grid::after {
+		content: "";
+		clear: both;
+		display: block;
+	}
+
 	@supports(display: grid) {
 		.grid {
 			display: grid;
