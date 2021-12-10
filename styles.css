@@ -36,12 +36,7 @@ nav ul {
 }
 
 nav ul ul {
-	display: none;
-}
-
-nav li:focus-within > ul, nav li:hover > ul { 
-	display: block;
-	font-size: .9em;
+	margin-left: 10px;
 }
 
 nav a {
@@ -89,19 +84,30 @@ aside {
 		justify-content: space-between;
 	}
 
+	nav ul ul {
+	display: none;
+	margin-left: 0;
+}
+
 	nav li:focus-within > ul, nav li:hover > ul {
 		position: absolute;
 		background-color: rgba(0,0,0,.7);
-		margin-top: 5px;
+		margin-top: 3px;
 		border-radius: 5px;
+		font-size: .9em;
+		display: block;
 	}
 
-	nav li:focus-within > ul, nav li:hover li:not(:first-child) {
-		margin-top: 5px;
+	nav li:hover li {
+		margin-top: 7px;
+	}
+
+	nav li:hover li:last-child {
+		margin-bottom: 7px;
 	}
 }
 
-@media screen and (min-width: 974px) {
+@media screen and (min-width: 979px) {
 
 	article {
 		float: left;
